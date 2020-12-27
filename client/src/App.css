@@ -1,0 +1,365 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:verdana;
+}
+body{
+  background:url("https://i.pinimg.com/originals/69/83/17/698317b9a7d9acba258010e73f0ad587.jpg");
+  background-position:center;
+}
+.comment-section,.search-bar{
+  border:none;
+  outline:none;
+  width:15%;
+  height:35px;
+  line-height:35px;
+  font-size:15px;
+  font-weight:bold;
+  font-family:helvetica;
+  background:pink;
+}
+button{
+  border:none;
+  outline:none;
+}
+/* styles for header  */
+
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1;
+}
+::placeholder{
+  color:black;
+  font-size:1em;
+  padding-left:3px;
+}
+.authLink{
+  font-size:18px;
+  color:white;
+  padding:5px;
+  margin:2px 4px;
+  cursor:pointer;
+  border:3px solid white;
+  outline:3px solid rgb(189, 9, 39);
+  background:rgb(189, 9, 39);
+}
+.addPost{
+  font-size:18px;
+  cursor:pointer;
+  padding:5px;
+  color:white;
+  border:3px solid white;
+  outline:3px solid rgb(189, 9, 39);
+  background:rgb(189, 9, 39);
+}
+.authLink:hover,.addPost:hover{
+  color:white;
+  border:2px solid rgb(189, 9, 39);
+  background:orange;
+}
+
+
+#section{
+  margin-top:10vh;
+  display:flex;
+  flex-direction:row;
+}
+
+
+/* styles for add post form */
+
+#main-container{
+  width:25%;
+  height:60vh;
+  position:fixed;
+  top:50%;
+  left:50%;
+  margin-left:-15%;
+  margin-top:-35vh;
+  z-index:1;
+  background:white;
+  box-shadow:0px 0px 10px grey;
+}
+.file-upload-container{
+  width:100%;
+  padding:10px;
+  display:flex;
+  margin:auto;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  height:100%;
+}
+
+.fa-times-circle{
+  height:30px;
+  width:30px;
+  margin-left:50px;
+  cursor:pointer;
+}
+#button-user-info{
+  display:flex;
+  
+  justify-content:space-around;
+  width:100%;
+}
+#user-info{
+  flex-grow:4;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  font-weight: 700;
+  margin-left:40px;
+  padding-bottom:10px;
+  font-family:cursive;
+
+}
+#user-info .fab{
+  font-size:35px;
+  padding:5px;
+  color:red;
+  border:6px solid rgb(253, 166, 4);
+  border-radius:50%;
+  margin:5px;
+}
+
+#visibility{
+  margin-top:-30px;
+}
+#about-image{
+  height:10vh;
+  outline:none;
+  border:2px solid pink;
+  resize:none;
+  width:80%;
+  color:black;
+}
+textarea{
+  color:black;
+  font-weight: bold;
+}
+#about-image:focus{
+  border:2px solid rgb(211, 5, 40);
+}
+#file-input{
+  display:none;
+}
+
+.fa-images{
+  color:green;
+  padding:7px;
+  cursor:pointer;
+  height:60px;
+  width:60px;
+}
+.fa-video{
+  color:blue;
+  padding:7px;
+  cursor:pointer;
+  height:40px;
+  width:40px;
+}
+.file-submit-button{
+  padding:10px;
+  cursor:pointer;
+  border:none;
+  outline:none;
+  background:rgb(228, 7, 43);
+  color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* styles for postrender section  */
+#post-render{
+  width:60%;
+  margin-left:30px;
+}
+
+.post-container{
+  height:700px;
+  width:100%;
+  margin:15px auto;
+  background:white;
+  position:relative;
+}
+
+.user-info{
+  display:flex;
+  align-items:center;
+  padding:20px 0 0 20px;
+}
+.user-img{
+  border-radius:50%;
+  padding:5px;
+  border:4px solid rgb(189, 9, 39);
+}
+.username{
+  margin-left:20px;
+}
+.photo{
+  display:block;
+  height:500px;
+  width:80%;
+  margin:auto;
+}
+.photo-desc{
+  font-size:20px;
+  font-family:helvetica;
+  width:80%;
+  margin:10px auto;
+  font-family:arial;
+}
+.user-review{
+  width:80%;
+  display:flex;
+  height:60px;
+  justify-content:space-evenly;
+  align-items:center;
+  margin:auto;
+}
+.far,.fas{
+  font-size:30px;
+  
+}
+.fa-thumbs-down,.fa-share-square,.fa-thumbs-up{
+  background:white;
+}
+.user-review button{
+  outline:none;
+  border:none;
+}
+.user-review button:focus{
+  
+  color:rgb(250, 6, 46);
+}
+.user-review input{
+  border:none;
+  background:pink;
+  outline:none;
+  width:60%;
+}
+.fa-share-square:focus{
+  color:rgb(250, 6, 46);
+}
+.share-options-box{
+  position:absolute;
+  width:60%;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  
+  background:white;
+  padding:20px;
+}
+.share-options-box i{
+  padding:10px;
+  font-size:30px;
+}
+.fa-whatsapp{
+  color:green;
+}
+.fa-facebook{
+  color:blue;
+}
+.fa-instagram{
+  color:rgb(238, 9, 47);
+}
+.fa-twitter{
+  color:skyblue;
+}
+.fa-clipboard{
+  color:rgba(0, 0, 0, 0.842);
+}
+.fab:hover,.fa-clipboard:hover{
+  background:pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  styles for follow-section  */
+#follow-section{
+  position:fixed;
+  right:30px;
+  top:10vh;
+  width:35%;
+  background:white;
+  height:88vh;
+  overflow:scroll;
+}
+.follow-tile{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  margin:10px 0 10px 100px;
+}
+
+.follow-button{
+  width:100px;
+  height:45px;
+  padding:10px;
+  border:none;
+  outline:none;
+}
+.follow-section-heading{
+  padding:20px;
+  color:rgb(189,9,39);
+  text-align:center;
+}
+
+.remove-follower,.fa-times{
+  border:none;
+  outline:none;
+  padding:0 10px;
+  background:none;
+  color:rgb(250, 6, 46);
+  font-size:25px;
+}
+#no-more{
+  text-align:center;
+  font-style:italic;
+}
+@media only screen and (max-width:800px){
+    #follow-section{
+      display:none;
+    }
+    #post-render{
+      width:90%;
+    }
+    .authLink{
+      display:none;
+    }
+    
+}
+@media only screen and (max-width:600px){
+  #main-container{
+    width:60%;
+    margin-left:-150px;
+  }
+}
